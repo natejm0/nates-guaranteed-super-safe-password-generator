@@ -3,23 +3,24 @@ import string
 import random
 import keyboard
 
-# Friendly welcome message :)
-print("Hello! Thank you for using Nate's guaranteed super safe password generator!")
-print("Press spacebar to generate your new password!")
+while True:
+    # Friendly welcome message :)
+    print("Hello! Thank you for using Nate's guaranteed super safe password generator!")
+    print("Press spacebar to generate your new password!")
 
-# Wait for user to press space
-keyboard.wait("space")
+    # Wait for user to press space
+    keyboard.wait("space")
 
-# Use a combination of letters A-Z + lowercase a-z, digits, and !$#
-puncChars = "!$&"
-characters = string.ascii_letters + string.digits + puncChars
+    # Use a combination of letters A-Z + lowercase a-z, digits, and !$#
+    puncChars = "!$&"
+    characters = string.ascii_letters + string.digits + puncChars
 
-# Randomized length for the password that will be generated
-passLength = random.randrange(12, 18)
+    # Randomized length for the password that will be generated
+    passLength = random.randrange(12, 18)
 
-# Generate password
-newPass = ''.join(secrets.choice(characters) for _ in range(passLength))
+    # Generate password
+    newPass = ''.join(secrets.choice(characters) for _ in range(passLength))
 
-# Print the user's new password :D
-print('Your new password is:')
-print(newPass)
+    # Print the user's new password :D
+    print('Your new password is:')
+    print(newPass)
