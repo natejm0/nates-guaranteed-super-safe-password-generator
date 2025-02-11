@@ -5,6 +5,7 @@ import keyboard
 
 while True:
     # Friendly welcome message :)
+    print("")
     print("Hello! Thank you for using Nate's guaranteed super safe password generator!")
     print("Press spacebar to generate your new password!")
 
@@ -22,5 +23,7 @@ while True:
     newPass = ''.join(secrets.choice(characters) for _ in range(passLength))
 
     # Print the user's new password :D
+    print("")
     print('Your new password is:')
     print(newPass)
+    print("")
